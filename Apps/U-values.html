@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    
+    <title>U-value Calculator</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+        
+    <script>
+        
+    $(document).ready(function(){
+                      
+        
+        let valueRow = $("#valueRow").getHtml();
+        
+        
+        $('div').click(function(){
+            if(this.id == "minus")
+               $(this.parentElement).hide();
+            if(this.id == "plus")
+                newSection();
+                
+        });
+        
+        function newSection(){
+            $("#title").after(valueRow);
+        }
+        
+        
+        
+    });
+        
+    </script>
+    </head>
+
+    
+    <body>
+    
+    <div class="w3-display-container w3-display-middle w3-card">
+        
+                
+        <div class="" >
+            
+            <div class="w3-container w3-blue" id="title">
+            <h1> U-Value Calculator</h1>
+            </div>
+            
+            <div class="w3-col w3-bar" id="valueRow">
+            
+            <div class="w3-bar-item w3-hover-opacity w3-blue w3-col s1 w3-center"
+            id="minus">-</div>    
+            
+            <div class="w3-col s5">
+                <input type="number" class="w3-input w3-bar-item" placeholder="U-value" id="u-value">
+            </div>
+            <div class="w3-col s5  w3-blue">
+                <input type="number" class="w3-input w3-bar-item" placeholder="Area" id="area">
+            </div>
+            </div>  
+            
+           
+            <div class="">
+            <div class="w3-col s1 w3-hover-opacity w3-light-blue w3-bar-item w3-center"
+            id="plus"><p>+</p>
+                </div>
+
+            
+            <div class="w3-col s6  w3-light-blue w3-bar-item" id="answer">
+                <p>Average U-value:</p> 
+                </div>
+            <div class="w3-col s5  w3-light-blue w3-hover-opacity w3-bar-item" id="calc">
+                <p>Calculate</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    
+    
+    </body>
+    
+</html>
